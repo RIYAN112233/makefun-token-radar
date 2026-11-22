@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Launch Radar — pre-token protocols ranked by implied value</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-in">
+    <p class="kicker">Token Launch Radar</p>
+    <h1>Protocols with no token yet, ranked by what a launch could be worth</h1>
+    <p class="lede" id="lede">Reading the snapshot…</p>
+    <nav class="views" aria-label="Views">
+      <button type="button" id="view-board" class="view-btn is-on">The board</button>
+      <button type="button" id="view-peers" class="view-btn">Tokenised peers</button>
+      <a class="view-btn as-link" href="#method">How the value is worked out</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section id="stats" class="stats" aria-label="Coverage"></section>
+  <section id="board-panel">
+    <div id="controls" class="controls"></div>
+    <div id="board-wrap"></div>
+    <div id="detail" class="detail" hidden></div>
+  </section>
+  <section id="peers-panel" hidden>
+    <p class="peers-note">These protocols already have a token that trades, so the radar never ranks them.
+    It learns from them instead: each one's market cap over its TVL is a vote on what its category's
+    launches are worth, and the board's multiples are the medians of these votes.</p>
+    <div id="peers-wrap"></div>
+  </section>
+  <section id="method" class="method"></section>
+</main>
+<footer>
+  <p id="foot">Built from one sealed snapshot; the page runs with no network and every figure on it is in its data file.</p>
+</footer>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
